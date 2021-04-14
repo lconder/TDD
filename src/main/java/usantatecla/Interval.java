@@ -52,7 +52,7 @@ public class Interval {
 	}
 
 	public boolean intersects(Interval interval) {
-		return false;
+		return interval.min.value < this.max.value;
 	}
 
 }

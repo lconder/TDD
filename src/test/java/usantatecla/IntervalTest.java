@@ -67,16 +67,16 @@ public class IntervalTest {
   }
 
   @Test
-  public void intersectsFalse() {
+  public void intersectsTrue() {
     Interval one = new IntervalBuilder().open(right.getEquals()).open(right.getEquals()).build();
     Interval two = new IntervalBuilder().open(left.getEquals()).open(left.getEquals()).build();
-    assertFalse(one.intersects(two));
+    assertTrue(one.intersects(two));
   }
 
   @Test
-  public void intersectsTrue() {
+  public void intersectsFalse() {
     Interval one = new IntervalBuilder().open(left.getEquals()).open(left.getGreater()).build();
     Interval two = new IntervalBuilder().open(right.getEquals()).open(right.getGreater()).build();
-    assertTrue(one.intersects(two));
+    assertFalse(one.intersects(two));
   }
 }
