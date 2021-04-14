@@ -49,6 +49,10 @@ public class Interval {
 	@Override
 	public String toString() {
 		return this.min.toString() + ", " + max.toString();
-	}	
+	}
+
+	public boolean intersects(Interval interval) {
+		return true;
+	}
 
 }
